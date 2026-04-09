@@ -30,7 +30,7 @@ jobs:
     steps:
       - run: |
         echo "The job was triggered by event: ${{ github.event_name }}"
-        echo "The name of your branch is ${{ github.ref.main }} and your repository is ."
+#        echo "The name of your branch is ${{ github.ref.main }} and your repository is ."
 
 #     - uses: actions/checkout@v3.3.0
 
