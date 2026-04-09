@@ -1,5 +1,5 @@
 name: GitHub Actions Demo
-# name: GitHub Actions Demo
+# name: GitHub Actions Demo 
 # name: github-actions-demo.yml
 
 # on every push to main branch, except when changes to .github folder
