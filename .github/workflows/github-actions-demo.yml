@@ -29,8 +29,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-        echo "The job was triggered by event: ${{ github.event_name }}"
-#        echo "The name of your branch is ${{ github.ref.main }} and your repository is ."
+#      echo "The job was triggered by event: ${{ github.event_name }}"
+#      echo "The name of your branch is ${{ github.ref.main }} and your repository is ."
 
 #     - uses: actions/checkout@v3.3.0
 
@@ -42,3 +42,6 @@ jobs:
         run: | 
           echo "The repository ${{ github.repository }} contains the following files:"
           tree
+          
+    continue-on-error: true
+    
