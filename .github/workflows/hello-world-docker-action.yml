@@ -1,0 +1,17 @@
+name: Hello World Docker Action
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run-hello-world:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run custom Docker action
+        uses: ./hello-world-docker-action
+        with:
+          who-to-greet: Monica
