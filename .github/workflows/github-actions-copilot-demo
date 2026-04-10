@@ -1,0 +1,38 @@
+name: GitHub Actions Copilot Demo
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - .github/**
+  pull_request:
+    branches:
+      - main
+  schedule:
+    - cron: "15 6 * * 0"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out full repository
+        uses: actions/checkout@v6
+
+      - name: Install tree utility
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y tree
+
+      - name: Display workflow context
+        run: |
+          echo "Triggered by: ${{ github.event_name }}"
+          echo "Branch: ${{ github.ref }}"
+          echo "Repository: ${{ github.repository }}"
+
+      - name: List all files in the repository
+        run: |
+          echo "Full recursive file listing:"
+          tree -a
