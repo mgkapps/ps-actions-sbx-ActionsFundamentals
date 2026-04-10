@@ -12,6 +12,6 @@ jobs:
         uses: actions/checkout@v6
 
       - name: Run custom Docker action
-        uses: ./hello-world-docker-action
+        uses: ./hello-world-docker-action/action.yml
         with:
           who-to-greet: Monica
